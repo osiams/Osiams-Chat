@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+			<html>
+				<head>
+				<title>PHP WebSockets</title>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
+				<link rel="stylesheet" type="text/css" href="css/css.css">
+				<script src="js/ip.php" type="text/javascript"></script>
+				<script src="js/js.js" type="text/javascript"></script>
+				<script type="text/javascript">
+					let chat
+					let ip =IP()
+					let port = 9000
+					window.onload=()=>chat=new client(ip,port)</script>
+				</head>
+				<body>
+				<div id="loginblock" class="c">
+					<h1>Welcome to WebSocket Chat box</h1>
+					<form name="login">
+					<input type="text" name="name">
+					<input type="button" value="Login" onclick="chat.login();"/>
+					</form>
+					<div id="at">
+						<script type="text/javascript">
+							document.write('<div class="httpat">')
+							document.write(AT())
+							document.write('</div><div class="wcmd">')
+							document.write(CMW())
+							document.write('</div>')
+						</script>
+					</div>
+				</div>
+				<div id="chatblock">
+					<div>
+						<div id="rmb_out" class="rmb_out">
+							<div id="rmb_head" class="rmb_head">In The Room</div>
+							<div id="rmb_room" class="rmb">Welcome to Websocket Chat.</div>
+						</div>
+						<div>
+							<form onsubmit="return false;">
+								<div class="sendblock">
+									<div>
+										<label class="color" id="label_fg" for="fg"  style="background-color:#000000;"></label>
+										<input id="fg" type="color" value="#000000" oninput="chat.setColor(this,'fg','label_fg','chatmessage')" hidden="hidden">
+									</div>
+									<div>
+										<label class="color" id="label_bg" for="bg"  style="background-color:#ffffff;"></label>
+										<input id="bg" type="color" value="#000000" oninput="chat.setColor(this,'bg','label_bg','chatmessage')" hidden="hidden">
+									</div>
+									<div>
+										<input type="text" id="chatmessage" onkeyup="if(event.key=='Enter'){chat.send('message')}">
+									</div>
+									<div>
+										<input type="button" value="send" onclick="chat.send('message')" />
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div id="userblock">
+						<div>
+							<div class="userstatus"> 
+								<div><button class="btlogout" onclick="let a=confirm('Are you sure you want to logout?');if(a){chat.logout()}">❌</button></div>
+							</div>
+							<div id="room" onclick="chat.setActive(this,JSON.stringify({&quot;key&quot;:&quot;room&quot;,&quot;name&quot;:&quot;In The Room.&quot;}))">🚪 In The Room. [<span id="n_user"></span>]</div>
+							<div id="me"></div>
+						</div>
+						<div id="userlist"></div>
+					</div>
+				</div>	
+				</body></html>
