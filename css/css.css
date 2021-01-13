@@ -1,0 +1,59 @@
+:root{--font-family-body:tahoma,sans;--font-size-body:15px;--font-family-input:tahoma,sans;--font-size-input:15px;}
+html{height:100%;}
+body{font-family:var(--font-family-body);font-size:var(--font-size-body);margin:0px;padding:0px;height:100%;background-color:#fafafa;overflow:hidden;}
+input[type="button"]{
+	height:32px;padding:3px 20px;border:1px solid #bbbbbb;cursor:pointer;
+	border-radius: 3px 3px 3px 3px;background-color:#d5d5d5;color:black;margin:1px;}
+input[type="text"]{height:25px;padding:3px;border:1px solid #bbbbbb;
+	border-radius: 3px 3px 3px 3px;font-size:var(--font-size-input);}
+p{margin:0px;}
+#loginblock{display:block;margin:0 auto;padding:0px;height:100%;background-color:Gainsboro;}
+#loginblock h1{margin-top:0px;}
+#chatblock{position:absolute;top:0px;left:0px;z-index:-1;height:calc(100% - 6px);width:calc(100% - 6px);display: grid;grid-template-columns:auto 160px;background-color:Gray;  grid-gap: 3px;padding: 3px;grid-template-rows:100%;}
+#chatblock > div:nth-child(1){display:grid;grid-template-rows:auto 34px;grid-gap: 3px;}
+.rmb_out{overflow: auto;height:100%;background-color:Snow;}
+.rmb_head{position: sticky;top: 0;padding: 5px;font-size: 20px;text-align:center;border-bottom:1px dashed DimGrey;}
+.bg_p{background-color: Gold;}
+.bg_m{background-color: Green;color:white}
+.bg_y{background-color: RebeccaPurple;color:white}
+.rmb{display:block;padding:3px;overflow:auto;}
+.rmb p{line-height:150%;margin-top:1px;position:relative}
+.rmb span{display:inline-block;padding:10px 10px;border-radius: 8px 8px 8px 8px;margin-left:30px;}
+.rmb span:after{position:absolute;top:25px;left:20px;width:10px;height:20px;clip-path:polygon(0px 0px, 10px 8px, 10px 20px);background-color: inherit;content: "";}
+
+.rmb_y{display:block;padding:3px;overflow:auto;}
+.rmb_y p{line-height:150%;margin-top:1px;position:relative;}
+.rmb_y span{display:inline-block;padding:10px 10px;border-radius: 8px 8px 8px 8px;margin-left:20px;}
+.rmb_y  p.p_m{line-height:150%;margin-top:1px;text-align:right;position:relative;}
+.rmb_y span.span_m{display:inline-block;padding:10px 10px;border-radius: 8px 8px 8px 8px;margin-right:10px;}
+
+.rmb_y span:after{position:absolute;top:25px;left:11px;width:10px;height:20px;clip-path:polygon(0px 0px, 10px 8px, 10px 20px);background-color: inherit;content: "";}
+.rmb_y span.span_m:after{position:absolute;top:25px;right:0px;left:calc(100% - 11px);width:10px;height:20px;clip-path:polygon(0px 8px, 0px 20px, 10px 0px);background-color: inherit;content: "";}
+
+.sendblock{display: grid;grid-template-columns:34px 34px auto 70px;text-align:center;grid-gap: 3px;}
+.sendblock input[type="text"]{width:calc(100% - 6px);}
+.sendblock input[type="button"]{width:100%;}
+#userblock{display:grid;grid-template-rows:90px auto;background-color:Silver;padding:3px;overflow:hidden}
+#userblock > div{display:grid;grid-template-rows:auto auto auto;}
+#userlist{ grid-template-rows:100%;background-color:LightGrey;align-content: start;overflow-y:auto;overflow-x:hidden;grid-gap: 0px;}
+#me{white-space: nowrap;overflow:hidden;/*ext-overflow: ellipsis;cursor:pointer;*/}
+#me > div{white-space: nowrap;text-overflow: ellipsis;cursor:default;padding:5px 0px 5px 3px;}
+#userlist > div{white-space: nowrap;text-overflow: ellipsis;cursor:default;padding:3px 0px 3px 3px;}
+#me:hover{background-color:DimGray;color:white;}
+#userlist > div:hover{background-color:DimGray;color:white;}
+#room{padding:5px 0px 5px 3px;}
+#room:hover{background-color:DimGray;cursor:pointer;color:white;}
+.listuser{display: grid;grid-template-columns:auto 30px 30px;align-content: center;grid-gap: 3px;}
+.listuser > div:nth-child(1){overflow:hidden;text-overflow: ellipsis;padding:3px;cursor:pointer;}
+.listuser > div:nth-child(2){display: grid;justify-content: center;align-content: center;background-color:red;width:26px;color:white;font-weight:bold;border-radius: 13px 13px 13px 13px;visibility:hidden;font-size:12px}
+.listuser > div:nth-child(3){}
+.list_active{background-color:green;color:white;}
+.userstatus{text-align:right}
+.btlogout{width:30px;height:30px;text-align:center;padding:0px;overflow: auto;}
+.pusermsg{}
+.color{display:block;height:32px;width:32px;padding:0px;border:1px solid #aaaaaa;}
+.conected{color:MediumSeaGreen;font-style: italic;}
+.disconected{color:LightCoral;font-style: italic;}
+.c{text-align:center;}
+.httpat{border:1px dashed DimGrey;margin:10px;padding:5px;background-color:white;text-align:left;}
+.wcmd{border:1px dashed DimGrey;margin:10px;background-color:black;color:white;padding:5px;text-align:left;}
