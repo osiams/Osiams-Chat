@@ -183,7 +183,10 @@ class PHPWebSockets{
 		$to = (count($to) == 0)?array_keys($this->user):$to;
 		$to = array_values(array_unique($to));
 		foreach($to as $k=>$v){
-			@socket_write($this->user[$v]["sock"],$text,strlen($text));
+			
+			if(isset($this->user[$v]["sock"])){echo "\n".$v."=".gettype($v)."\n";
+				@socket_write($this->user[$v]["sock"],$text,strlen($text));
+			}
 		}
 	}
 	private function mask(string $text):string{
