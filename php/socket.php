@@ -15,7 +15,7 @@ class PHPWebSockets{
 		$this->sock = new stdClass();
 		$this->clients = [];
 		$this->user = [];
-		$this->stat = "Osiams Chat V0.0";
+		$this->stat = "PHP Sockets Chat V0.1";
 	}
 	public function start():void{
 		$this->status($this->stat." @".$this->host.":".$this->port);
